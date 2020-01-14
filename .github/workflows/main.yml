@@ -13,7 +13,11 @@ jobs:
     - name: configure
       run: mkdir build
     - name: cmake
-      run: cmake
-    - name: execute
-      run: cd build/ && ./program1 
+      run: cmake -E make_directory ${{runner.workspace}}/build
+    - name: build
+      working-directory: ${{runner.workspace}}/build
+      run: cmake --build .
+    - name: run
+      working-directory: ${{runner.workspace}}/build
+      run: ./program1
   
