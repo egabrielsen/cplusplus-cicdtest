@@ -13,7 +13,7 @@ jobs:
     - name: configure
       run: mkdir build
     - name: cmake
-    - run: cmake -B build/ && cd build/ && make
+      run: cmake -B build/ && cd build/ && make
     - name: execute
-    - run: cd build/ && ./program1 
+      run: cd build/ && ./program1 
   
