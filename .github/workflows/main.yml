@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    timout-minutes: 2
+    timeout-minutes: 2
     steps:
     - uses: actions/checkout@v1
     - name: Setup C++ environment
