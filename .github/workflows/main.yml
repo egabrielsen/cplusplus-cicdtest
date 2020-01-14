@@ -1,0 +1,15 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timout-minutes: 2
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup C++ environment
+      uses: kurocha/setup-cpp@v1
+    - run: cmake -B build/ && cd build/ && make
+    - run: ./program1 
+  
