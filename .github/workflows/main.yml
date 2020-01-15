@@ -36,5 +36,5 @@ jobs:
     - name: run
       shell: bash
       working-directory: ${{runner.workspace}}/build
-      run: ls && ./${{github.event.repository.name}}
+      run: ls && ./cplusplus-cicdtest
   
