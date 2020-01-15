@@ -3,4 +3,4 @@ project(cplusplus_cicdtest)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(cplusplus-cicdtest main.cpp)
+add_executable(cplusplus-cicdtest main.cpp Car.cpp Car.h)
