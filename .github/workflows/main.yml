@@ -35,5 +35,5 @@ jobs:
       run: cmake --build . --config $BUILD_TYPE
     - name: run
       working-directory: ${{runner.workspace}}/build
-      run: ${{runner.workspace}}/build/${{github.event.repository.name}}
+      run: ./${{github.event.repository.name}}
   
